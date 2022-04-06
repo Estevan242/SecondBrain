@@ -8,23 +8,24 @@ import Day from './pages/Day';
 import Workout from './pages/Workout';
 import Habits from './pages/Habits';
 
-
 function App() {
   return (
+    
     <>
-      <Router>
+   
+        <Router>
         <Navbar />
-        <Routes>
-      
-          <Route path='/' exact component={Home} />
-          <Route path='/day' component={Day} />
-          <Route path='/habits' component={Habits} />
-          <Route path='/notes' component={Notes} />
-          <Route path='/workout' component={Workout} />
+          <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/day' element={<Day/>} />
+          <Route path='/habits' element={<Habits/>} />
+          <Route path='/notes' element={<Notes/>} />
+          <Route path='/workout' element={<Workout/>} />
+          </Routes>
 
-          </Routes>    
-      </Router>
-    </>
+          </Router>
+     
+   </>
   );
 }
 
