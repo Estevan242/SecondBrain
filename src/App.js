@@ -10,9 +10,7 @@ import Habits from './pages/Habits';
 
 function App() {
   return (
-    
     <>
-   
         <Router>
         <Navbar />
           <Routes>
@@ -22,7 +20,6 @@ function App() {
           <Route path='/notes' element={<Notes/>} />
           <Route path='/workout' element={<Workout/>} />
           </Routes>
-
           </Router>
      
    </>

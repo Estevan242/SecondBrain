@@ -2,11 +2,13 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
+import './Home.css'
 import {
   Scheduler,
-  DayView,
+  WeekView,
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
+import appointments from '../demo-data/today-appointments';
 
 const currentDate = '2018-11-01';
 const schedulerData = [
@@ -15,17 +17,9 @@ const schedulerData = [
 ];
 function Home (){
   return (
-  <Paper>
-    <Scheduler
-      data={schedulerData}
-    >
-      <ViewState
-        currentDate={currentDate}
-      />
-      <DayView
-        startDayHour={9}
-        endDayHour={14}
-      />
+    <Paper>
+    <Scheduler data={appointments} height={660}>
+      <WeekView startDayHour={9} endDayHour={19} />
       <Appointments />
     </Scheduler>
   </Paper>
